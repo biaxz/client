@@ -315,7 +315,7 @@ bool ConnectionValidator::setAndCheckServerVersion(const QString &version)
     // We attempt to work with servers >= 5.0.0 but warn users.
     // Check usages of Account::serverVersionUnsupported() for details.
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 9, 0)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     // Record that the server supports HTTP/2
     if (auto job = qobject_cast<AbstractNetworkJob *>(sender())) {
         if (auto reply = job->reply()) {
